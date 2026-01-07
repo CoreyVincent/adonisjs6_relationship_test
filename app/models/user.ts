@@ -50,6 +50,9 @@ export default class User extends compose(AppBaseModel, AuthFinder) {
   })
   declare client: BelongsTo<typeof Client>
 
-  @belongsTo(() => Role)
+  @belongsTo(() => Role, {
+    foreignKey: 'roleId',
+    localKey: 'id',
+  })
   declare role: BelongsTo<typeof Role>
 }

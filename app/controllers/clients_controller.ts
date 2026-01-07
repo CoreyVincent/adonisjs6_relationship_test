@@ -11,6 +11,7 @@ export default class ClientsController {
         roleQuery.where('name', 'like', 'admin')
       })
     })
+    // const clients = await Client.all()
     return clients
   }
 
